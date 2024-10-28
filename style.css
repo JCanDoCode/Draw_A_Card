@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    user-select: none;
+}
+
+
+.container {
+    width: 90%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.card-container {
+    width: 50%;
+    height: 35%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.card-place {
+    width: 90%;
+    height: 45%;
+    border: 5px solid white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected-card {
+    width: 10%;
+    height: 50%;
+    left: 200px;
+    top: 0;
+    background-image: url(./images/card.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    display: none;
+}
+.card {
+    width: 25%;
+    height: 95%;
+    margin-right: 1%;
+    background-image: url(./images/card.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.card:nth-of-type(1) {
+    width: 25%;
+    height: 95%;
+    margin-left: 1%;
+    margin-right: 1%;
+    background-image: url(./images/card.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.card1 {
+    width: 25%;
+    height: 95%;
+    margin-left: 1%;
+    margin-right: 1%;
+    background-image: url(./images/card1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.card2 {
+    width: 25%;
+    height: 95%;
+    margin-right: 1%;
+    background-image: url(./images/card2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.card3 {
+    width: 25%;
+    height: 95%;
+    margin-right: 1%;
+    background-image: url(./images/card3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.card4 {
+    width: 25%;
+    height: 95%;
+    margin-right: 1%;
+    background-image: url(./images/card4.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.undefined {
+    display: none;
+}
