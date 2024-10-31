@@ -8,11 +8,22 @@ body {
     align-items: center;
     background-color: black;
     user-select: none;
+    font-size: 62.5%;
 }
 
+.logo {
+    position: absolute;
+    height: 90px;
+    left: 3vw;
+    top: 3vw;
+    object-fit: contain;
 
+    @media (max-width: 481px) {
+        width: 94vw;
+    }
+}
 .container {
-    width: 90%;
+    width: 100%;
     height: 75%;
     display: flex;
     flex-direction: column;
@@ -21,92 +32,72 @@ body {
     overflow: hidden;
 }
 .card-container {
-    width: 50%;
+    width: 90%;
     height: 35%;
+    padding: 5px;
     margin-bottom: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
 }
 .card-place {
     width: 90%;
-    height: 45%;
+    height: 35%;
+    padding: 5px;
     border: 5px solid white;
     border-radius: 5px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: white #FFFFFF20;
 }
 
 .selected-card {
     width: 10%;
     height: 50%;
-    left: 200px;
+    left: 0;
     top: 0;
-    background-image: url(./images/card.png);
+    background-image: url("https://www.deckofcardsapi.com/static/img/back.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     position: absolute;
     display: none;
+    pointer-events: none;
 }
 .card {
-    width: 25%;
-    height: 95%;
-    margin-right: 1%;
-    background-image: url(./images/card.png);
+    width: 100%;
+    height: 100%;
+    background-image: url("https://www.deckofcardsapi.com/static/img/back.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    cursor: grab;
 }
-.card:nth-of-type(1) {
+.drawn-card {
     width: 25%;
-    height: 95%;
+    height: 100%;
+    margin-right: 1%;
+    object-fit: contain;
+    object-position: center;
+}
+.drawn-card:nth-of-type(1) {
     margin-left: 1%;
-    margin-right: 1%;
-    background-image: url(./images/card.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
 }
-.card1 {
-    width: 25%;
-    height: 95%;
-    margin-left: 1%;
-    margin-right: 1%;
-    background-image: url(./images/card1.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-.card2 {
-    width: 25%;
-    height: 95%;
-    margin-right: 1%;
-    background-image: url(./images/card2.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-.card3 {
-    width: 25%;
-    height: 95%;
-    margin-right: 1%;
-    background-image: url(./images/card3.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-.card4 {
-    width: 25%;
-    height: 95%;
-    margin-right: 1%;
-    background-image: url(./images/card4.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-.undefined {
-    display: none;
+.btn {
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid white;
+    border-radius: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: white;
+    transition: all 0.15s ease;
+
+    &:hover {
+        background-color: white;
+        color: black;
+    }
 }
