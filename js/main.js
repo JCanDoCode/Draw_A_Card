@@ -3,10 +3,11 @@ const card_container = document.querySelector(".card-container");
 const selected_card = document.querySelector(".selected-card");
 const card_place = document.querySelector(".card-place");
 const rect = container.getBoundingClientRect();
+const currYear = document.querySelector("#currYear");
 let active = false;
 
+currYear.innerHTML = new Date().getFullYear();
 const card_select = () => {
-    
     selected_card.style.display = "block";
     active = true;
 }
@@ -37,6 +38,7 @@ async function choose_card() {
         console.log("No card selected!");
     }
 }
+
 card_place.addEventListener("click", choose_card, false);
 card_container.addEventListener('click', card_select, false);
 container.addEventListener('mousemove', move_card, false);
